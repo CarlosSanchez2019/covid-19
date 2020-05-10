@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  .container
+    h3.mt-4 Casos Actualizados hace: #{time}
+    ul.list-group.mt-4
+      each d in data
+        li.list-group-item
+          h5=d.Country
+          p Casos Confirmados: #{d.TotalConfirmed} | Nuevos Casos: #{d.NewConfirmed}
+          p Tolal Muertes: #{d.TotalDeaths} | Nuevas Muertes: #{d.NewDeaths} 
+    
